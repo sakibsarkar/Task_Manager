@@ -1,0 +1,99 @@
+nav {
+    width: 100vw;
+    padding: 10px 0;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+}
+
+.navWrapper {
+    max-width: calc(1300px - 70px);
+    /*decrease the padding from main width  */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+}
+
+.logo img {
+    width: 160px;
+}
+
+.navWrapper ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.navWrapper ul li a {
+    font-size: 18px;
+    color: black;
+    position: relative;
+}
+
+.navWrapper ul li a::after {
+    content: "";
+    font-size: 18px;
+    color: black;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #37b5ff;
+    transition: 0.3s;
+    left: 0;
+    bottom: -5px;
+}
+
+.navWrapper ul li a:hover::after {
+    width: 100%;
+    height: 2px;
+
+}
+
+.navWrapper ul li .active {
+    position: relative;
+}
+
+.navWrapper ul li .active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #37b5ff;
+    left: 0;
+    bottom: -5px;
+}
+
+
+.navWrapper .authButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #37b5ff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navWrapper .authButton:hover {
+    background-color: transparent;
+    box-shadow: inset 120px 40px #37b5ff;
+    color: white;
+
+}
+
+.navWrapper .authButton:hover .authLink {
+    color: white;
+
+}
+
+.navWrapper .authButton .authLink {
+    color: rgb(0, 0, 0);
+}
+
+.navWrapper .authButton .authLink:hover {
+    text-decoration: underline;
+
+}
