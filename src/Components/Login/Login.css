@@ -1,0 +1,94 @@
+.logInContainer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+
+.logInContainer form {
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    width: 450px;
+    min-height: 380px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 0 0;
+    border-radius: 5px;
+}
+
+
+.logInContainer form>h1 {
+    margin: 0 0 18px 0px;
+}
+
+.formFeild {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+
+
+.eyeIcon {
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+    cursor: pointer;
+}
+
+.loginEye {
+    font-size: 19px;
+
+}
+
+
+
+.formFeild p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.formFeild input {
+    border: none;
+    border-bottom: 1px solid rgb(124, 124, 124);
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    height: 32px;
+    font-size: 18px;
+}
+
+.logInContainer form button {
+
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 5px 0;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #37b5ff, #1a1ac8);
+}
+
+
+.authActions {
+    width: 100%;
+    text-align: left;
+    color: black;
+}
+
+.authActions p a {
+    color: #218cc9;
+    text-decoration: underline;
+}

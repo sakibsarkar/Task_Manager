@@ -1,0 +1,61 @@
+.socialAuthContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    padding: 10px 0;
+}
+
+.or {
+    position: absolute;
+    top: -22px;
+    width: 100%;
+}
+
+.orAuth {
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+}
+
+.orAuth::after {
+    content: "";
+    position: absolute;
+    width: 38%;
+    left: 0;
+    top: 9px;
+    height: 2px;
+    background-color: rgb(186 186 186);
+}
+
+.orAuth::before {
+    content: "";
+    position: absolute;
+    width: 38%;
+    right: 0;
+    top: 9px;
+    height: 2px;
+    background-color: rgb(186 186 186);
+}
+
+.socialAuthContainer .socialBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.socialAuthContainer .socialBox:hover {
+    box-shadow: inset 200px 0 #37b5ff;
+    color: white;
+    border: 1px solid #37b5ff;
+}

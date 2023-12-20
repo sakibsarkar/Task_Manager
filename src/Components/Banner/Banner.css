@@ -1,0 +1,42 @@
+.bannerContainer {
+    height: 80vh;
+    max-width: calc(1300px - 70px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 0 35px;
+}
+
+.bannerTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.bannerTxt h1 {
+    font-size: 65px;
+    background: linear-gradient(to right, #37b5ff, #1a1ac8);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.bannerTxt .exploreBtn {
+    border: none;
+    background: linear-gradient(#36b2fe, #5549f7);
+    color: white;
+    padding: 9px 22px;
+    font-size: 21px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bannerTxt .exploreBtn:hover {
+    background: linear-gradient(#36b2fe, #5549f7);
+    box-shadow: inset 180px 0 #5549f7;
+
+}
