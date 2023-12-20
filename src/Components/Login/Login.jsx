@@ -40,7 +40,7 @@ const Login = () => {
             <h1>Welcome Back</h1>
             <p>Stay connected and finish your Task on time</p>
             <form onSubmit={handleLogin}>
-                <h1>Log in</h1>
+                <h1>Login</h1>
                 <div className="formFeild">
                     <p>Email</p>
                     <input required type="email" placeholder="Email" name="email" />
