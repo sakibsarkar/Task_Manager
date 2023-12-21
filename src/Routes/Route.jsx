@@ -8,6 +8,7 @@ import MyCompleted from "../MyCompleted/MyCompleted";
 import MyOngoings from "../MyOngoings/MyOngoings";
 import MyTodos from "../Dashboard/MyTodos/MyTodos";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Profile from "../Profile/Profile";
 import Register from "../Components/Register/Register";
 import UpdateTask from "../Components/UpdateTask/UpdateTask";
 import { createBrowserRouter } from "react-router-dom";
@@ -55,6 +56,11 @@ export const routes = createBrowserRouter([
             {
                 path: "/dashboard/completed",
                 element: <PrivateRoute><MyCompleted /></PrivateRoute>
+            },
+            {
+                path: "/dashboard/profile",
+                element: <PrivateRoute><Profile /></PrivateRoute>
+
             }
         ]
     },

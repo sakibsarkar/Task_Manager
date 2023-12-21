@@ -1,5 +1,6 @@
 import "./DashboardBar.css";
 import { BiTask } from "react-icons/bi";
+import { FaRegUser } from "react-icons/fa";
 import { IoIosHome } from "react-icons/io";
 import { LiaTasksSolid } from "react-icons/lia";
 import { LuFileClock } from "react-icons/lu";
@@ -19,6 +20,7 @@ const DashboardBar = () => {
                 <NavLink to={"/dashboard/toDo"}><BiTask />To-do Task</NavLink>
                 <NavLink to={"/dashboard/ongoing"}><LuFileClock />OnGoing Task</NavLink>
                 <NavLink to={"/dashboard/completed"}><MdTask />Completed Task</NavLink>
+                <NavLink to={"/dashboard/profile"}><FaRegUser />My profile</NavLink>
                 <NavLink to={"/"}><IoIosHome />Home</NavLink>
             </div>
 

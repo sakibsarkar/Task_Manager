@@ -22,7 +22,7 @@ const MyTaskCard = ({ todo, refetch, showEdit = true }) => {
 
     const formattedDate = `${year}-${month}-${day}`;
 
-    if (formattedDate == deadline) {
+    if (formattedDate == deadline && showEdit) {
         toast.error(`Today is deadline for "${title}"`)
     }
 
