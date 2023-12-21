@@ -146,3 +146,54 @@ nav {
     padding: 4px 5px;
     cursor: pointer;
 }
+
+
+.mobileNav {
+    display: none;
+    padding: 0 30px 0 0;
+    position: relative;
+}
+
+
+
+.mobileNav .menuIcon {
+    font-size: 24px;
+
+}
+
+
+.navModal {
+    position: absolute;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    justify-content: center;
+    gap: 21px;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    width: 154px;
+    height: 158px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    top: 30px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .navWrapper {
+        display: none;
+    }
+
+    .mobileNav {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 730px) {
+    .logo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

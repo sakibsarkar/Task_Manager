@@ -1,0 +1,38 @@
+.benefitWrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+
+}
+
+.benefitWrapper>h1 {
+    color: #43b5f9;
+    font-size: 49px;
+    position: relative;
+    
+}
+
+.benefitWrapper>h1::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #43b5f9;
+    left: 0;
+    bottom: -6px;
+}
+
+.benefitBox {
+    border-top: 1px solid #d0d0d0;
+    padding: 20px 0;
+}
+
+.benefitBox p span {
+    color: black;
+    font-weight: 600;
+}

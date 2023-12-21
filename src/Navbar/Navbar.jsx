@@ -1,11 +1,15 @@
 import "./Navbar.css";
 import { useContext, useState } from "react";
+import { IoMenu } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 import { Authcontext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
     const { user, logOut } = useContext(Authcontext)
     const [showUserMoadal, setShowUserModal] = useState(false)
+
+    const [showMobileNav, setShowMobileNav] = useState(false)
+
     return (
         <nav>
             <div className="navWrapper">
@@ -15,7 +19,11 @@ const Navbar = () => {
 
                 <ul>
                     <li><NavLink to={"/"}>Home</NavLink></li>
-                    <li><NavLink to={"/dashboard/manageTask"}>Dashboard</NavLink></li>
+                    {
+                        user ?
+                            <li><NavLink to={"/dashboard/manageTask"}>Dashboard</NavLink></li>
+                            : ""
+                    }
                     <li><NavLink to={"/dashboard"}>Contact</NavLink></li>
                     <li><NavLink to={"/dashboard"}>About</NavLink></li>
                 </ul>
@@ -31,6 +39,7 @@ const Navbar = () => {
                                 showUserMoadal ?
                                     <div className="userModal">
                                         <Link to={"/dashboard/manageTask"} onClick={() => setShowUserModal(!showUserMoadal)} >Dashboard</Link>
+
                                         <button onClick={logOut}>LogOut</button>
                                     </div>
                                     : ""
@@ -43,6 +52,21 @@ const Navbar = () => {
                             <p>|</p>
                             <Link to={"/register"} className="authLink">Signup</Link>
                         </div>
+                }
+            </div>
+
+            <div className="mobileNav">
+                <IoMenu className={"menuIcon"} onClick={() => setShowMobileNav(!showMobileNav)} />
+
+                {
+                    showMobileNav ?
+                        <div className="navModal">
+                            <NavLink to={"/"}>Home</NavLink>
+                            <NavLink to={"/dashboard"}>About</NavLink>
+                            <NavLink to={"/dashboard/manageTask"}>Dashboard</NavLink>
+                        </div>
+
+                        : ""
                 }
             </div>
         </nav>
