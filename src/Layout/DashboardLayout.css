@@ -1,0 +1,13 @@
+.dashoboardContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.dashOutlet {
+    width: calc(100vw - 300px);
+    height: 100vh;
+    overflow-y: auto;
+    background-color: rgb(255, 255, 255);
+}

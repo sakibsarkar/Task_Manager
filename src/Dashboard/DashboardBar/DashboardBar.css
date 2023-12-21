@@ -1,0 +1,25 @@
+.dashBarContainer {
+    width: 300px;
+    height: 100vh;
+    background-color: #ededed;
+}
+
+.dashLogo {
+    width: 150px;
+}
+
+.dashLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashLinks a {
+    color: black;
+    padding: 17px 12px;
+}
+
+.dashLinks .active {
+    background-color: #37b5ff;
+    color: white !important;
+}

@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Authcontext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
-    const { user } = useContext(Authcontext)
+    const { user, logOut } = useContext(Authcontext)
     const [showUserMoadal, setShowUserModal] = useState(false)
     return (
         <nav>
@@ -31,7 +31,7 @@ const Navbar = () => {
                                 showUserMoadal ?
                                     <div className="userModal">
                                         <Link to={"/dashboard"} onClick={() => setShowUserModal(!showUserMoadal)} >Dashboard</Link>
-                                        <button>LogOut</button>
+                                        <button onClick={logOut}>LogOut</button>
                                     </div>
                                     : ""
                             }
