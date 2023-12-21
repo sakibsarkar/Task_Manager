@@ -1,6 +1,7 @@
 import "./MyTaskCard.css";
 import Swal from "sweetalert2";
 import UseAxios from "../../Axios/UseAxios";
+import toast from "react-hot-toast";
 import { FaTrashCan } from "react-icons/fa6";
 import { MdEdit } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -11,6 +12,19 @@ const MyTaskCard = ({ todo, refetch, showEdit = true }) => {
 
     const token = getItemFromLS("token")
     const axios = UseAxios()
+
+
+    const today = new Date();
+
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+    const day = String(today.getDate()).padStart(2, '0');
+
+    const formattedDate = `${year}-${month}-${day}`;
+
+    if (formattedDate == deadline) {
+        toast.error(`Today is deadline for "${title}"`)
+    }
 
     const handleDelete = async () => {
         Swal.fire({
