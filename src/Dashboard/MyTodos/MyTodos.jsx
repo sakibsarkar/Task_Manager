@@ -20,8 +20,9 @@ const MyTodos = () => {
 
     return (
         <div className="myTaskContainer">
+            <h1>To-do Task</h1>
             {
-                data?.map(todo => <MyTaskCard refetch={refetch} key={todo._id} todo={todo}></MyTaskCard>)
+                data?.map(todo => <MyTaskCard  refetch={refetch} key={todo._id} todo={todo}></MyTaskCard>)
             }
         </div>
     );

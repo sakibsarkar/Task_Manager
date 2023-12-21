@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import Login from "../Components/Login/Login";
 import MainLayout from "../Layout/MainLayout";
 import ManageTask from "../Dashboard/ManageTask/ManageTask";
+import MyOngoings from "../MyOngoings/MyOngoings";
 import MyTodos from "../Dashboard/MyTodos/MyTodos";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Register from "../Components/Register/Register";
@@ -45,6 +46,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/dashboard/toDo",
                 element: <PrivateRoute><MyTodos /></PrivateRoute>
+            },
+            {
+                path: "/dashboard/ongoing",
+                element: <PrivateRoute><MyOngoings /></PrivateRoute>
             }
         ]
     },

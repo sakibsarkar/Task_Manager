@@ -6,7 +6,7 @@ import { MdEdit } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { getItemFromLS } from "../../LocalStorage/localStorage";
 
-const MyTaskCard = ({ todo, refetch }) => {
+const MyTaskCard = ({ todo, refetch, showEdit = true }) => {
     const { _id, title, deadline, description, priority, user_email, status } = todo || {}
 
     const token = getItemFromLS("token")
@@ -48,9 +48,13 @@ const MyTaskCard = ({ todo, refetch }) => {
                 <p className="taskActionIcon" style={{ background: "#e92424" }} onClick={handleDelete}>
                     <FaTrashCan />
                 </p>
-                <Link className="taskActionIcon" to={`/update/${_id}`} style={{ background: "#37b5ff" }}>
-                    <MdEdit />
-                </Link>
+                {
+                    showEdit ?
+                        <Link className="taskActionIcon" to={`/update/${_id}`} style={{ background: "#37b5ff" }}>
+                            <MdEdit />
+                        </Link>
+                        : ""
+                }
             </div>
         </div>
     );

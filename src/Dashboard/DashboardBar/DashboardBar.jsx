@@ -14,7 +14,8 @@ const DashboardBar = () => {
             <div className="dashLinks">
                 <NavLink to={"/dashboard/manageTask"}><LiaTasksSolid />Manage Task</NavLink>
                 <NavLink to={"/dashboard/createTask"}><MdOutlineCreateNewFolder />Create task</NavLink>
-                <NavLink to={"/dashboard/toDo"}><BiTask />To-do's</NavLink>
+                <NavLink to={"/dashboard/toDo"}><BiTask />To-do Task</NavLink>
+                <NavLink to={"/dashboard/ongoing"}><BiTask />OnGoing Task</NavLink>
                 <NavLink to={"/"}><IoIosHome />Home</NavLink>
             </div>
 
