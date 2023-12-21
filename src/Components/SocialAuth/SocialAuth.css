@@ -55,7 +55,7 @@
 }
 
 .socialAuthContainer .socialBox:hover {
-    box-shadow: inset 200px 0 #37b5ff;
+    box-shadow: inset 250px 0 #37b5ff;
     color: white;
     border: 1px solid #37b5ff;
 }

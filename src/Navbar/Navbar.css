@@ -97,3 +97,52 @@ nav {
     text-decoration: underline;
 
 }
+
+
+
+.userBox {
+    position: relative;
+}
+
+.userImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #37b5ff;
+    padding: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.userImg img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+.userModal {
+    position: absolute;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    z-index: 99;
+    background: white;
+    gap: 20px;
+    right: 5px;
+    top: 51px;
+    border-radius: 5px;
+}
+
+
+.userModal button {
+    background: #ed3434;
+    border: none;
+    color: white;
+    padding: 4px 5px;
+    cursor: pointer;
+}

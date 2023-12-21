@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
     const [waitForUser, setWaitForUser] = useState(true)
     const [toast, setToast] = useState(null)
     const [naviGateLocation, setNaviGateLocation] = useState("")//it will be use in register page we will set the value from log in page
-
+    const [myToast, setMyToast] = useState(null)
 
     // const axios = UseAxios()
 
@@ -50,7 +50,7 @@ const AuthProvider = ({ children }) => {
         onAuthStateChanged(auth, USER => {
             setUser(USER)
 
-                 setLoading(false)
+            setLoading(false)
         })
 
 
@@ -73,7 +73,9 @@ const AuthProvider = ({ children }) => {
         naviGateLocation,
         setNaviGateLocation,
         paymentObject,
-        setPaymentObject
+        setPaymentObject,
+        myToast,
+        setMyToast
     }
 
 

@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { useContext, useState } from "react";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { SlEye } from "react-icons/sl";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
@@ -12,7 +12,14 @@ const Login = () => {
 
     const [showPass, setShowPass] = useState(false)
 
-    const { loginWithEmail, loading } = useContext(Authcontext)
+    const { loginWithEmail, loading, setNaviGateLocation, myToast, setMyToast } = useContext(Authcontext)
+
+    const loaction = useLocation()
+    const adress = location.state ? location.state : "/"
+    setNaviGateLocation(loaction)
+
+
+    const navigate = useNavigate()
 
     // login
     const handleLogin = async (e) => {
@@ -23,8 +30,9 @@ const Login = () => {
         const toastLoader = toast.loading("trying to login")
         try {
             await loginWithEmail(email.value, password.value)
+            navigate(adress)
             toast.dismiss(toastLoader)
-            toast.success("successfully loged in")
+            setMyToast(toast.success("successfully loged in"))
         }
         catch (err) {
             console.log(err)

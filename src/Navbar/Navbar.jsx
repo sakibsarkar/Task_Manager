@@ -1,10 +1,11 @@
 import "./Navbar.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Authcontext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
     const { user } = useContext(Authcontext)
+    const [showUserMoadal, setShowUserModal] = useState(false)
     return (
         <nav>
             <div className="navWrapper">
@@ -20,7 +21,22 @@ const Navbar = () => {
                 </ul>
                 {
                     user ?
-                        ""
+                        <div className="userBox" >
+
+                            <div className="userImg" onClick={() => setShowUserModal(!showUserMoadal)} >
+                                <img src={user?.photoURL} alt="" />
+                            </div>
+
+                            {
+                                showUserMoadal ?
+                                    <div className="userModal">
+                                        <Link to={"/dashboard"} onClick={() => setShowUserModal(!showUserMoadal)} >Dashboard</Link>
+                                        <button>LogOut</button>
+                                    </div>
+                                    : ""
+                            }
+
+                        </div>
                         :
                         <div className="authButton">
                             <Link to={"/login"} className="authLink">Login</Link>
