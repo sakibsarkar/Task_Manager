@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import toast from "react-hot-toast";
 import { useContext } from "react";
@@ -15,6 +16,7 @@ const MainLayout = () => {
         <>
             <Navbar />
             <Outlet />
+            <Footer />
         </>
     );
 };

@@ -1,5 +1,5 @@
 .bannerContainer {
-    height: 80vh;
+    height: 100vh;
     max-width: calc(1300px - 70px);
     display: flex;
     justify-content: space-between;
