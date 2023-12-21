@@ -1,6 +1,5 @@
 import "./OngoingCard.css";
 import { useDrag } from "react-dnd";
-import { FaPen, FaTrashAlt } from "react-icons/fa";
 
 const OngoingCard = ({ ongoing }) => {
     const { _id, title, deadline, description, priority, user_email, status } = ongoing || {}
@@ -13,17 +12,17 @@ const OngoingCard = ({ ongoing }) => {
     }))
 
     return (
-        <div>
-            <div className="ongoingCard" ref={drag} style={isDragging ? { display: "none", cursor: 'grab' } : {}}>
-                <h1>{title}</h1>
-                <p>{description}</p>
-                <div className="taksInfo">
-                    <p>Deadline : {deadline}</p>
-                    <p>Priority :{priority}</p>
-                </div>
 
+        <div className="ongoingCard" ref={drag} style={isDragging ? { display: "none", cursor: 'grab' } : {}}>
+            <h1>{title}</h1>
+            <p>{description}</p>
+            <div className="taksInfo">
+                <p>Deadline : {deadline}</p>
+                <p>Priority :{priority}</p>
             </div>
+
         </div>
+
     );
 };
 

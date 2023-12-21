@@ -1,7 +1,14 @@
 .dashBarContainer {
     width: 300px;
-    height: 100vh;
+    height: calc(100vh - 50px);
     background-color: #ededed;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+
 }
 
 .dashLogo {
@@ -12,11 +19,17 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .dashLinks a {
     color: black;
     padding: 17px 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 11px;
+    font-size: 18px;
 }
 
 .dashLinks .active {

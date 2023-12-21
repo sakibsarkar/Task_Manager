@@ -1,0 +1,68 @@
+.taskUpdateContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.taskUpdateContainer form {
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    width: 450px;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+}
+
+.taskUpdateContainer form .updateFeild {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+
+.taskUpdateContainer form .updateFeild textarea {
+    width: 98%;
+    height: 150px;
+    outline: none;
+}
+
+.taskUpdateContainer form .updateFeild input {
+    width: 98%;
+    height: 27px;
+    outline: none;
+}
+
+
+.taskUpdateContainer form .updateFeild p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.taskUpdateContainer form button {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    padding: 0 0;
+    background: #37b5ff;
+    color: white;
+    padding: 9px 0;
+    border: 1px solid #37b6ff00;
+    transition: 0.3s;
+}
+
+.taskUpdateContainer form button:hover {
+    width: 97%;
+    border: 1px solid #37b5ff;
+    background-color: transparent;
+    color: #37b5ff;
+}

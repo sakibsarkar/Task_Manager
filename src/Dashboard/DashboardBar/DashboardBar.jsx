@@ -1,4 +1,8 @@
 import "./DashboardBar.css";
+import { BiTask } from "react-icons/bi";
+import { IoIosHome } from "react-icons/io";
+import { LiaTasksSolid } from "react-icons/lia";
+import { MdOutlineCreateNewFolder } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 const DashboardBar = () => {
@@ -8,9 +12,10 @@ const DashboardBar = () => {
 
 
             <div className="dashLinks">
-                <NavLink to={"/dashboard/manageTask"}>Manage Task</NavLink>
-                <NavLink to={"/dashboard/createTask"}>Create task</NavLink>
-                <NavLink to={"/dashboard/toDo"}>To-do</NavLink>
+                <NavLink to={"/dashboard/manageTask"}><LiaTasksSolid />Manage Task</NavLink>
+                <NavLink to={"/dashboard/createTask"}><MdOutlineCreateNewFolder />Create task</NavLink>
+                <NavLink to={"/dashboard/toDo"}><BiTask />To-do's</NavLink>
+                <NavLink to={"/"}><IoIosHome />Home</NavLink>
             </div>
 
 

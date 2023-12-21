@@ -1,0 +1,51 @@
+.taskContainer {
+    border: 1px solid #37b5ff;
+    width: 700px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.taskContainer h1 {
+    color: #37b5ff;
+}
+
+
+.taskContainer .taskDescription {
+    width: 98%;
+    overflow: hidden;
+}
+
+.taskInfo {
+    color: rgb(46, 46, 46);
+
+}
+
+.taskInfo span {
+    color: rgb(156, 156, 156);
+}
+
+
+.taskAction {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 20px;
+}
+
+.taskAction .taskActionIcon {
+
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+}

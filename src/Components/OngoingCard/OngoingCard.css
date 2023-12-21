@@ -6,6 +6,7 @@
     gap: 12px;
     cursor: grab;
     border-radius: 5px;
+    width: calc(100% - 18px)
 }
 
 
@@ -17,20 +18,5 @@
 
 .ongoingCard p {
     font-size: 15px;
-}
-
-.ongoingCard .actions {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    cursor: pointer;
-    color: #37b5ff;
-}
-
-
-.ongoingCard .actionIcon:hover {
-
-    color: #496f85;
-
+    overflow: hidden;
 }

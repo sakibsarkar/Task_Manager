@@ -4,8 +4,10 @@ import Home from "../Home/Home";
 import Login from "../Components/Login/Login";
 import MainLayout from "../Layout/MainLayout";
 import ManageTask from "../Dashboard/ManageTask/ManageTask";
+import MyTodos from "../Dashboard/MyTodos/MyTodos";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Register from "../Components/Register/Register";
+import UpdateTask from "../Components/UpdateTask/UpdateTask";
 import { createBrowserRouter } from "react-router-dom";
 
 export const routes = createBrowserRouter([
@@ -40,7 +42,15 @@ export const routes = createBrowserRouter([
                 path: "/dashboard/manageTask",
                 element: <PrivateRoute><ManageTask />  </PrivateRoute>
             },
+            {
+                path: "/dashboard/toDo",
+                element: <PrivateRoute><MyTodos /></PrivateRoute>
+            }
         ]
+    },
+    {
+        path: "/update/:id",
+        element: <PrivateRoute><UpdateTask /></PrivateRoute>
     }
 
 

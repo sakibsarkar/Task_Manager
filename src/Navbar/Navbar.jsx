@@ -15,7 +15,7 @@ const Navbar = () => {
 
                 <ul>
                     <li><NavLink to={"/"}>Home</NavLink></li>
-                    <li><NavLink to={"/dashboard"}>Dashboard</NavLink></li>
+                    <li><NavLink to={"/dashboard/manageTask"}>Dashboard</NavLink></li>
                     <li><NavLink to={"/dashboard"}>Contact</NavLink></li>
                     <li><NavLink to={"/dashboard"}>About</NavLink></li>
                 </ul>
@@ -30,7 +30,7 @@ const Navbar = () => {
                             {
                                 showUserMoadal ?
                                     <div className="userModal">
-                                        <Link to={"/dashboard"} onClick={() => setShowUserModal(!showUserMoadal)} >Dashboard</Link>
+                                        <Link to={"/dashboard/manageTask"} onClick={() => setShowUserModal(!showUserMoadal)} >Dashboard</Link>
                                         <button onClick={logOut}>LogOut</button>
                                     </div>
                                     : ""

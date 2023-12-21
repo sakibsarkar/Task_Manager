@@ -123,7 +123,7 @@ const ManageTask = () => {
 
     }
 
-
+    
 
 
 
@@ -138,7 +138,7 @@ const ManageTask = () => {
                             <h1>To-do Task</h1>
                             <div className="todoCards" >
                                 {
-                                    data?.toDo?.map(todo => <TodoCard key={todo._id} todo={todo} />)
+                                    data?.toDo?.map(todo => <TodoCard key={todo._id} todo={todo} myRefetch={myRefetch} setMyRefetch={setMyRefetch} />)
 
                                 }
                             </div>
