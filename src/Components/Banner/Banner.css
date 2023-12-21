@@ -40,3 +40,44 @@
     box-shadow: inset 180px 0 #5549f7;
 
 }
+
+
+
+
+
+
+@media screen and (max-width: 499px) {
+    .bannerImg img {
+        width: 80%
+    }
+
+    .bannerTxt h1 {
+        font-size: 50px;
+    }
+
+    .bannerContainer {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 499px) and (max-width: 843px) {
+    .bannerImg img {
+        width: 500px;
+    }
+
+
+
+    .bannerContainer {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 843px) and (max-width: 1170px) {
+    .bannerImg img {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 1921px) {}
