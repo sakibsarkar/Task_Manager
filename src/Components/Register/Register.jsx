@@ -1,17 +1,21 @@
 import "./Register.css";
 import SocialAuth from "../SocialAuth/SocialAuth";
+import UseAxios from "../../Axios/UseAxios";
 import toast from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
 import { uploadImage } from "../../Hooks & Functions/uploadImage";
+import { addtoLS } from "../../LocalStorage/localStorage";
 
 const Register = () => {
     const { createAccountWithEmail, naviGateLocation, waitForUser, setWaitForUser } = useContext(Authcontext)
 
     const [userType, setUserType] = useState("none")
 
+
+    const axios = UseAxios()
 
     const handleRegister = async (e) => {
         e.preventDefault()
@@ -50,13 +54,20 @@ const Register = () => {
 
         const toastLoading = toast.loading("Creating your account")
         try {
-            const { user } = await createAccountWithEmail(email, password)
             const { data } = await uploadImage(image)
+            const { user } = await createAccountWithEmail(email, password)
             await updateProfile(user, {
                 photoURL: data?.display_url,
                 displayName: name
             })
-            toast.dismiss(toastLoading)
+            const { data: token } = await axios.post("/user/token", { email: user?.email })
+            addtoLS(token)
+            const userObjs = {
+                user_email: user?.email,
+                userType: userType
+            }
+
+            await axios.post(`/add/user?token=${data}`, userObjs)
             toast.success("successfuly created account")
             setWaitForUser(!waitForUser)
         }

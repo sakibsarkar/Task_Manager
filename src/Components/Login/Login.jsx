@@ -1,11 +1,13 @@
 import "./Login.css";
 import SocialAuth from "../SocialAuth/SocialAuth";
+import UseAxios from "../../Axios/UseAxios";
 import toast from "react-hot-toast";
 import { useContext, useState } from "react";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { SlEye } from "react-icons/sl";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
+import { addtoLS } from "../../LocalStorage/localStorage";
 
 const Login = () => {
 
@@ -18,6 +20,7 @@ const Login = () => {
     const adress = location.state ? location.state : "/"
     setNaviGateLocation(loaction)
 
+    const axios = UseAxios()
 
     const navigate = useNavigate()
 
@@ -30,6 +33,8 @@ const Login = () => {
         const toastLoader = toast.loading("trying to login")
         try {
             await loginWithEmail(email.value, password.value)
+            const { data } = await axios.get("/user/token")
+            console.log(data);
             navigate(adress)
             toast.dismiss(toastLoader)
             setMyToast(toast.success("successfully loged in"))

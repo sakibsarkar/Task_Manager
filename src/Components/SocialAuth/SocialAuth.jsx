@@ -1,10 +1,12 @@
 import "./SocialAuth.css";
+import UseAxios from "../../Axios/UseAxios";
 import toast from "react-hot-toast";
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { IoLogoGithub } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { Authcontext } from "../../AuthProvider/AuthProvider";
+import { addtoLS } from "../../LocalStorage/localStorage";
 
 const SocialAuth = ({ marginT = 0 }) => {
 
@@ -13,9 +15,21 @@ const SocialAuth = ({ marginT = 0 }) => {
     const adress = naviGateLocation.state ? naviGateLocation.state : "/"
     const navigate = useNavigate()
 
+
+    const axios = UseAxios()
+
     const handleMeadiaLogin = async (media) => {
 
-        await media()
+        const { user } = await media()
+        const { data } = await axios.post("/user/token", { email: user?.email })
+        addtoLS(data)
+
+        const userObjs = {
+            user_email: user?.email,
+            userType: "Professional"
+        }
+
+        await axios.post(`/add/user?token=${data}`, userObjs)
         setMyToast(toast.success("successfully loged in"))
         navigate(adress)
 
