@@ -1,0 +1,31 @@
+.taskManageContainer {
+    width: calc(100% -40px);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.taskManageContainer .taskBox {
+    width: 25%;
+    height: 540px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+}
+
+.taskManageContainer .taskBox>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

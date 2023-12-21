@@ -20,7 +20,7 @@ const CreateTask = () => {
 
     const handleCreateTask = async (value) => {
 
-        const taskInfo = { ...value, priority: priority, user_email: user?.email }
+        const taskInfo = { ...value, priority: priority, user_email: user?.email, status: "To-do" }
         try {
             const { data } = await axios.post(`/addTask?token=${token}`, taskInfo)
             reset()

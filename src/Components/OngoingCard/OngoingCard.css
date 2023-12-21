@@ -1,0 +1,36 @@
+.ongoingCard {
+    border: 1px solid #37b5ff;
+    padding: 10px 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: grab;
+    border-radius: 5px;
+}
+
+
+
+.ongoingCard h1 {
+    font-size: 18px;
+    color: #37b5ff;
+}
+
+.ongoingCard p {
+    font-size: 15px;
+}
+
+.ongoingCard .actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    color: #37b5ff;
+}
+
+
+.ongoingCard .actionIcon:hover {
+
+    color: #496f85;
+
+}

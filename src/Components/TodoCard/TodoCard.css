@@ -1,0 +1,36 @@
+.todoCard {
+    border: 1px solid #37b5ff;
+    padding: 10px 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: grab;
+    border-radius: 5px;
+}
+
+
+
+.todoCard h1 {
+    font-size: 18px;
+    color: #37b5ff;
+}
+
+.todoCard p {
+    font-size: 15px;
+}
+
+.todoCard .actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    color: #37b5ff;
+}
+
+
+.todoCard .actionIcon:hover {
+
+    color: #496f85;
+
+}
