@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Authcontext } from "../AuthProvider/AuthProvider";
 
 const instance = axios.create({
-    baseURL: "http://localhost:5000/api"
+    baseURL: "https://task-maneger-server-five.vercel.app/api"
 })
 
 

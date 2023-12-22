@@ -18,13 +18,12 @@
 .dashLinks {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     width: 100%;
 }
 
 .dashLinks a {
     color: black;
-    padding: 17px 12px;
+    padding: 20px 12px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -32,7 +31,18 @@
     font-size: 18px;
 }
 
+
+.dashLinks a:hover {
+    background-color: #37b6ff4e;
+}
+
 .dashLinks .active {
+    background-color: #37b5ff;
+    color: white !important;
+}
+
+
+.dashLinks .active:hover {
     background-color: #37b5ff;
     color: white !important;
 }

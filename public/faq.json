@@ -1,0 +1,18 @@
+[
+    {
+        "question": "How do I manage my task on this website?",
+        "answer": "To manage your task goto dashboard and from the manage task section you can easily change your task status by dragging it"
+    },
+    {
+        "question": "Is my task data secure on this website?",
+        "answer": "Yes, we take data security seriously. Your assignment data is encrypted and stored securely on our servers. We have robust security measures in place to protect your information from unauthorized access."
+    },
+    {
+        "question": "Can I edit my submitted Task after uploading it?",
+        "answer": "Once an task is submitted, only you can edit your assignment"
+    },
+    {
+        "question": "Is there a deadline for task submissions on this website?",
+        "answer": "The submission deadline depends on your assignment's due date, which is typically set by your educational institution. Please ensure you submit your task well in advance of the deadline to avoid any issues."
+    }
+]

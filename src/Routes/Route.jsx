@@ -1,5 +1,7 @@
+import Contact from "../Contact/Contact";
 import CreateTask from "../Dashboard/CreateTask/CreateTask";
 import DashboardLayout from "../Layout/DashboardLayout";
+import FAQ from "../FAQ/FAQ";
 import Home from "../Home/Home";
 import Login from "../Components/Login/Login";
 import MainLayout from "../Layout/MainLayout";
@@ -30,6 +32,14 @@ export const routes = createBrowserRouter([
                 path: "/register",
                 element: <Register />
             },
+            {
+                path: "/contact",
+                element: <Contact />
+            },
+            {
+                path: "/faq",
+                element: <FAQ />
+            }
 
         ]
     },

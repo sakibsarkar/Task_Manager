@@ -24,8 +24,8 @@ const Navbar = () => {
                             <li><NavLink to={"/dashboard/manageTask"}>Dashboard</NavLink></li>
                             : ""
                     }
-                    <li><NavLink to={"/dashboard"}>Contact</NavLink></li>
-                    <li><NavLink to={"/dashboard"}>About</NavLink></li>
+                    <li><NavLink to={"/contact"}>Contact</NavLink></li>
+                    <li><NavLink to={"/faq"}>FAQ</NavLink></li>
                 </ul>
                 {
                     user ?
@@ -62,7 +62,8 @@ const Navbar = () => {
                     showMobileNav ?
                         <div className="navModal">
                             <NavLink to={"/"}>Home</NavLink>
-                            <NavLink to={"/dashboard"}>About</NavLink>
+                            <NavLink to={"/faq"}>FAQ</NavLink>
+                            <NavLink to={"/contact"}>Contact</NavLink>
                             <NavLink to={"/dashboard/manageTask"}>Dashboard</NavLink>
                         </div>
 
