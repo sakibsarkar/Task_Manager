@@ -16,9 +16,9 @@ const Login = () => {
 
     const { loginWithEmail, loading, setNaviGateLocation, myToast, setMyToast } = useContext(Authcontext)
 
-    const loaction = useLocation()
+    const location = useLocation()
     const adress = location.state ? location.state : "/"
-    setNaviGateLocation(loaction)
+    setNaviGateLocation(location)
 
     const axios = UseAxios()
 
@@ -33,9 +33,9 @@ const Login = () => {
         const toastLoader = toast.loading("trying to login")
         try {
             await loginWithEmail(email.value, password.value)
-            const { data } = await axios.get("/user/token")
-            console.log(data);
-            navigate(adress)
+            const { data } = await axios.post("/user/token")
+            addtoLS(data)
+            navigate(location.state ? location.state : "/")
             toast.dismiss(toastLoader)
             setMyToast(toast.success("successfully loged in"))
         }
