@@ -22,7 +22,7 @@ const MyCompleted = () => {
 
     return (
         <div className="completedTaskContainer">
-            <h1>Ongoing Task</h1>
+            <h1>Completed Task</h1>
             {
                 data?.map(todo => <MyTaskCard showEdit={false} refetch={refetch} key={todo._id} todo={todo}></MyTaskCard>)
             }
