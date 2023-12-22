@@ -1,7 +1,7 @@
 .dashoboardContainer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: centerd;
 }
 
 
@@ -10,4 +10,20 @@
     height: 100vh;
     overflow-y: auto;
     background-color: rgb(255, 255, 255);
+}
+
+
+
+@media screen and (max-width: 1250px) {
+
+    .dashoboardContainer {
+        flex-direction: column;
+
+    }
+
+    .dashOutlet {
+        width: 100vw;
+    }
+
+
 }

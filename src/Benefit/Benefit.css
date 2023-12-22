@@ -14,7 +14,7 @@
     color: #43b5f9;
     font-size: 49px;
     position: relative;
-    
+
 }
 
 .benefitWrapper>h1::after {
@@ -36,3 +36,12 @@
     color: black;
     font-weight: 600;
 }
+
+
+@media screen and (max-width: 855px) {
+    .benefitContainer {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 1921px) {}
