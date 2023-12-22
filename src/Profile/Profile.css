@@ -79,3 +79,25 @@
     background-color: transparent;
     box-shadow: inset 100px 0 rgb(252, 37, 37);
 }
+
+
+
+
+
+@media screen and (max-width: 510px) {
+    .profileCard {
+        width: 90%;
+    }
+
+    .shape {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width: 670px) {
+    .profileCard {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1921px) {}
