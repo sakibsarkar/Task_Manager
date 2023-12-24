@@ -44,7 +44,9 @@ const ManageTask = () => {
         collect: (monitor) => ({
             isOver: !!monitor.isOver()
         })
-    }))
+    })
+        ,
+        [myRefetch])
 
     // change the status into onGoing
     const handleOngoing = async (id) => {
@@ -58,7 +60,7 @@ const ManageTask = () => {
             confirmButtonText: "Ok"
         }).then((result) => {
             if (result.isConfirmed) {
-                location.reload()
+                setMyRefetch(!myRefetch)
             }
         });
 
@@ -73,7 +75,9 @@ const ManageTask = () => {
         collect: (monitor) => ({
             isOver: !!monitor.isOver()
         })
-    }))
+    })
+        ,
+        [myRefetch])
 
     // change the status into Completed
     const handleComleted = async (id) => {
@@ -87,7 +91,7 @@ const ManageTask = () => {
             confirmButtonText: "Ok"
         }).then((result) => {
             if (result.isConfirmed) {
-                location.reload()
+                setMyRefetch(!myRefetch)
             }
         });
 
@@ -103,7 +107,8 @@ const ManageTask = () => {
         collect: (monitor) => ({
             isOver: !!monitor.isOver()
         })
-    }))
+    }),
+        [myRefetch])
 
     // change the status into Completed
     const handleTodo = async (id) => {
@@ -117,13 +122,13 @@ const ManageTask = () => {
             confirmButtonText: "Ok"
         }).then((result) => {
             if (result.isConfirmed) {
-                location.reload()
+                setMyRefetch(!myRefetch)
             }
         });
 
     }
 
-    
+
 
 
 

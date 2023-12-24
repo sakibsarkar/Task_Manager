@@ -13,17 +13,17 @@ const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <DndProvider backend={HTML5Backend}>
+      <QueryClientProvider client={queryClient}>
 
-    <QueryClientProvider client={queryClient}>
+        <AuthProvider>
 
-      <AuthProvider>
-        <DndProvider backend={HTML5Backend}>
           <Toaster />
           <RouterProvider router={routes} />
-        </DndProvider>
-      </AuthProvider>
 
-    </QueryClientProvider>
+        </AuthProvider>
 
-  </React.StrictMode>,
+      </QueryClientProvider>
+    </DndProvider>
+  </React.StrictMode >,
 )
